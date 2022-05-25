@@ -1,0 +1,18 @@
+<h1>{{value}}</h1>
+<h2>{{type}}</h2>
+<h3>{{label}}</h3>
+
+<div [ngSwitch]="type">
+        <div class="field" *ngSwitchCase="1">
+                <div class="field-line">
+                        <div *ngIf="(label !== '') ;then blockTextTrue else blockTextFalse "></div>
+                        <ng-template #blockTextTrue>
+                                <h3>{{label}}</h3>
+                        </ng-template>
+                        <ng-template #blockTextFalse>
+                                <h3>Caso de Label Vacio</h3>
+                        </ng-template>
+                </div>
+        </div>
+        
+</div>
