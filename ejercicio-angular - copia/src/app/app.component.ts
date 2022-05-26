@@ -8,6 +8,19 @@ import { typeOfField } from './shared/model/field';
 })
 export class AppComponent {
   valor:string="Sebastian Gomez";
-  tipo:typeOfField= 1;
+  tipo:typeOfField= 0;
   label:string="";
+  value:string | undefined;
+  type:typeOfField | undefined;
+  entity:string |undefined;
+  property:string |undefined;
+  required:undefined | boolean; 
+  readonly:undefined | boolean;
+  order?:undefined | number;
+  group?:undefined | string; 
+  format ?: {key: string, value: Object}[] ;
+  options?: {key: string, value: Object}[];
+  minColumnas:any;
+  minFilas:any;
+
 }

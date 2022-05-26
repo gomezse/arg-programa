@@ -3,11 +3,19 @@ import { LocationChangeEvent } from '@angular/common';
 
 export enum typeOfField {
     TEXT,
+    TEXTAREA,
+    DATE,
     CHECKBOX,
+    EMAIL,
+    PASSWORD,
+    RADIO,
+    SUBMIT,
     NUMBER,
     MONETARY,
     ICON,
-    FLOAT
+    FLOAT,
+    BUTTON,
+    SELECT
 }
 
 export interface Field {

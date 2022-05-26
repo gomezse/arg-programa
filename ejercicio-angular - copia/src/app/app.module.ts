@@ -9,7 +9,9 @@ import { PersonaComponent } from './core/components/persona/persona.component';
 import { FieldsComponent } from './shared/components/fields/fields.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { typeOfField } from './shared/model/field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +26,13 @@ import { typeOfField } from './shared/model/field';
     BrowserModule,
     FormsModule,
     FontAwesomeModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  valor:string="abc";
-  tipo:typeOfField= 1;
+ 
 
  }
